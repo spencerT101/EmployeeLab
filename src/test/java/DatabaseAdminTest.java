@@ -18,6 +18,18 @@ public class DatabaseAdminTest {
     }
 
     @Test
+    public void canChangeName() {
+        dbAdmin.setName("Martha");
+        assertEquals("Martha", dbAdmin.getName());
+    }
+
+    @Test
+    public void cantChangeNameWithNullValue() {
+        dbAdmin.setName(null);
+        assertEquals("Bartha", dbAdmin.getName());
+    }
+
+    @Test
     public void hasSalary(){
         assertEquals(250000, dbAdmin.getSalary(), 0.00);
     }

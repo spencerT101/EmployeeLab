@@ -25,6 +25,12 @@ public class ManagerTest {
     }
 
     @Test
+    public void cantChangeNameWithNullValue() {
+        manager.setName(null);
+        assertEquals("Spencer", manager.getName());
+    }
+
+    @Test
     public void hasSalary(){
         assertEquals(112000, manager.getSalary(), 0.00);
     }
